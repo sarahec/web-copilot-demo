@@ -1,17 +1,21 @@
-// Write a button component with the label "Click me!".
-// When the button is clicked, it should alert the string "Hello!".
-// The button should be exported as the default export from this module.
+// Write a button component with the label "Click me!"
+// When the button is clicked, display the number of times it has been clicked.
 
-// import React from 'react'
+import { useState } from 'react'
 
-function Button() {
+const Button = () => {
+    const [count, setCount] = useState(0)
+    const handleClick = () => {
+        setCount(count + 1)
+    }
     return (
         <>
-        <button onClick={() => alert("Hello!")}>Click me!</button>
+        <button onClick={handleClick}>Click me!</button>
+        <p>{count}</p>
         </>
     )
     }
 
-export default Button
 
+export default Button
 
