@@ -1,11 +1,13 @@
 import './App.css'
+import Button from './Button'
 
 function App() {
 
   return (
     <>
       <div>
-        <h1>Put something here</h1>
+        <h1>Click the button</h1>
+        <Button />
       </div>
     </>
   )
